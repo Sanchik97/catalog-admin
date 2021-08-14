@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Redirect, Route, Switch} from "react-router-dom"
+import {privateRoutes, publicRoutes} from "@app/routes"
+import Layout from "@app/layout/layout"
+import PrivateRoute from "@app/hoc/private-route"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Switch>
+			<Route path={Object.values(privateRoutes).map(route => route.path)}>
+				<Layout>
+					<Switch>
+						<PrivateRoute>
+							{Object.values(privateRoutes).map(({path, component}) => (
+								<Route key={path} path={path} exact={true} component={component}/>
+							))}
+						</PrivateRoute>
+					</Switch>
+				</Layout>
+			</Route>
+
+			<Route path={Object.values(publicRoutes).map(route => route.path)}>
+				<Switch>
+					{Object.values(publicRoutes).map(({path, component}) => (
+						<Route key={path} path={path} exact={true} component={component}/>
+					))}
+				</Switch>
+			</Route>
+			<Redirect from={'/'} exact={true} to={privateRoutes.home.path}/>
+
+			<Redirect to={publicRoutes.notFound.path}/>
+		</Switch>
+	)
 }
 
-export default App;
+export default App
