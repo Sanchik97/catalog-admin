@@ -16,3 +16,12 @@ code {
 .ant-menu-item:first-child {
     margin-top: 0 !important;
 }
+
+.ant-descriptions-item-label {
+    font-weight: 500!important;
+}
+
+
+.new-bid {
+    background: #f6ffed;
+}

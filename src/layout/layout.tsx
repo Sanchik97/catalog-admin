@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Layout as AntdLayout } from 'antd'
-import { LayoutFooter, LayoutHeader, LayoutMenu } from '@app/layout/components'
+import React, {useState} from 'react'
+import {Layout as AntdLayout} from 'antd'
+import {LayoutFooter, LayoutHeader, LayoutMenu} from '@app/layout/components'
 import styles from './layout.module.scss'
-import logo from '@assets/images/logo.svg'
+import logo from '@assets/images/admin.svg'
 
 const { Sider, Content } = AntdLayout
 
@@ -17,7 +17,7 @@ const Layout: React.FC<props> = ({ children }) => {
     <AntdLayout className={styles.layout}>
       <Sider theme={'light'} className={styles.sider} collapsible collapsed={collapsed} onCollapse={onCollapse}>
         <div className={styles.logo}>
-          <img src={logo} alt={'Bradex'} />
+          <img src={logo} alt={'Ards Lux'} />
         </div>
         <LayoutMenu />
       </Sider>

@@ -1,26 +1,25 @@
 import React from 'react'
-import {Menu} from 'antd'
+import { Menu } from 'antd'
 import {
-	AppstoreAddOutlined,
-	HomeOutlined,
-	MessageOutlined,
-	SettingOutlined,
-	ShopOutlined,
-	ShoppingOutlined,
+  AppstoreAddOutlined,
+  ExperimentOutlined,
+  InfoCircleOutlined,
+  MessageOutlined,
+  SettingOutlined,
+  ShopOutlined,
+  ShoppingOutlined,
 } from '@ant-design/icons'
-import {privateRoutes} from '@app/routes'
-import {Link, useLocation} from 'react-router-dom'
-
-const {SubMenu} = Menu
+import { privateRoutes } from '@app/routes'
+import { Link, useLocation } from 'react-router-dom'
 
 interface props {
 }
 
 const menu = [
 	{
-		title: 'Главная',
+		title: 'Информация',
 		path: privateRoutes.home.path,
-		icon: <HomeOutlined/>,
+		icon: <InfoCircleOutlined/>,
 	},
 	{
 		title: 'Заявки',
@@ -38,9 +37,14 @@ const menu = [
 		icon: <ShopOutlined/>
 	},
 	{
-		title: 'Продукты',
+		title: 'Товары',
 		path: privateRoutes.products.path,
 		icon: <ShoppingOutlined/>
+	},
+	{
+		title: 'Характеристики',
+		path: privateRoutes.characteristics.path,
+		icon: <ExperimentOutlined/>
 	},
 	{
 		title: 'Настройки',
