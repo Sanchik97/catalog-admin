@@ -32,5 +32,6 @@ jobs:
           #           key: ${{ secrets.forSSH }}
           port: 22
           source: "./build/"
-          target: "/web/cabinet.ardslux.uz/public_html/"
+          target: "/home/ardslux.uz/web/cabinet.ardslux.uz/public_html"
           strip_components: 2 # this is important
+          rm: true
