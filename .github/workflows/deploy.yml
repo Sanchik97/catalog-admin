@@ -30,7 +30,7 @@ jobs:
           username: ardslux.uz
           password: tQ21ce01$
           #           key: ${{ secrets.forSSH }}
-          port: 21
+          port: 22
           source: "./build/"
           target: "/web/cabinet.ardslux.uz/public_html/"
           strip_components: 2 # this is important
