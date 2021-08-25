@@ -34,4 +34,3 @@ jobs:
           source: "./build/"
           target: "/web/cabinet.ardslux.uz/public_html/"
           strip_components: 2 # this is important
-          rm: true
