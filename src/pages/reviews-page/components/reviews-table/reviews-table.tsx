@@ -45,8 +45,7 @@ const ReviewsTable: React.FC<props> = ({ data }) => {
     },
     {
       title: 'Дата создания',
-      dataIndex: 'created_at',
-      render: (date: string) => <span>{new Date(date).toLocaleDateString()}</span>,
+      dataIndex: 'created_at'
     },
     {
       title: 'Действия',
