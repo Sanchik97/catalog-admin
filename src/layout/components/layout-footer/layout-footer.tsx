@@ -9,7 +9,7 @@ interface props {}
 const LayoutFooter: React.FC<props> = () => {
   return (
     <Footer className={styles.footer}>
-      Copyright. © {new Date().getFullYear()}. Ards Lux™
+      Copyright. © {new Date().getFullYear()}. Admin Panel
     </Footer>
   )
 }
