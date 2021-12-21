@@ -12,9 +12,7 @@ makeRequest.interceptors.request.use(
       'Content-Type': 'application/json',
     }
 
-    config.params = {
-      token: localStorage.getItem(AUTH_TOKEN),
-    }
+    config.params.token = localStorage.getItem(AUTH_TOKEN)
 
     return config
   },
