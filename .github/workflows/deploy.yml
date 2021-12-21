@@ -26,9 +26,9 @@ jobs:
       - name: copy file via ssh key
         uses: appleboy/scp-action@master
         with:
-          host: 95.142.42.35
-          username: ardslux.uz
-          password: tQ21ce01$
+          host: 13.48.136.150
+          username: ardsluxuz
+          password: 3zvQw5GivFvmsZUD
           #           key: ${{ secrets.forSSH }}
           port: 22
           source: "./build/"
